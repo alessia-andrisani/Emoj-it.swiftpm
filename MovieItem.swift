@@ -14,7 +14,7 @@ struct MovieItem: View {
 		case complete
 	}
 	
-	@ObservedObject var levelStore: LevelStore
+	@EnvironmentObject var levelStore: LevelStore
 	
 	
 	var icon: String = "🎬"

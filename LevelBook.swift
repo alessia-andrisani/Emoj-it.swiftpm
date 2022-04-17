@@ -17,11 +17,14 @@ struct LevelBook: View {
 	
 	@State private var showingPopover = false
 	
+	@EnvironmentObject var levelStore: LevelStore
+	
 	var body: some View {
 		ZStack {
 		VStack(spacing: 30) {
 			Spacer()
-			Text("Can you guess the title?") //TODO: Make dynamic Movie or Book, increase font
+			Text("Can you guess the book title?")
+				.font(.title)
 			
 			Text(book.emojis.joined())
 				.font(.system(size: 60))
@@ -34,12 +37,14 @@ struct LevelBook: View {
 				.padding()
 				.frame(width: UIScreen.main.bounds.width / 1.9, height: UIScreen.main.bounds.height / 20)
 				.overlay(RoundedRectangle(cornerRadius: 19).stroke())
-				.onSubmit { //TODO: Only if the answer is correct
-					withAnimation {
-					showingPopover = true
-					}
+				.onSubmit { 
+					
+						checkAnswer()
+						
 				}
-				
+				Text("Number of words: ")
+				.font(.title2)
+				.fontWeight(.medium)
 			Spacer()
 			Spacer()
 				
@@ -47,7 +52,7 @@ struct LevelBook: View {
 			if showingPopover {
 				Color.black.opacity(0.6).ignoresSafeArea()
 					
-				Popover(showingPopover: $showingPopover)
+				Popover(showingPopover: $showingPopover, book: book)
 			}
 	}
 		.navigationTitle("Book")
@@ -89,6 +94,15 @@ struct LevelBook: View {
 			}
 		}
 		
+	}
+	
+	func checkAnswer() {
+		if userInput.normalized() == book.title.normalized() {
+			print("Correct!")
+			withAnimation {
+				showingPopover = true
+			}
+		}
 	}
 }
 

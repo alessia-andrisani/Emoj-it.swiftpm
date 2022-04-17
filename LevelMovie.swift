@@ -21,7 +21,8 @@ struct LevelMovie: View {
 		ZStack {
 		VStack(spacing: 30) {
 			Spacer()
-			Text("Can you guess the title?") //TODO: Make dynamic Movie or Book, increase font
+			Text("Can you guess the movie title?")
+				.font(.title)
 			
 			Text(movie.emojis.joined())
 				.font(.system(size: 60))
@@ -39,15 +40,19 @@ struct LevelMovie: View {
 					showingPopover = true
 					}
 				}
-				
+			Text("Number of words: ")
+			.font(.title2)
+			.fontWeight(.medium)
 			Spacer()
 			Spacer()
 				
 		}
 			if showingPopover {
 				Color.black.opacity(0.6).ignoresSafeArea()
-					
-				Popover(showingPopover: $showingPopover)
+				
+				//TODO: maybe two popover for movielevel and booklevel?
+				
+//				Popover(showingPopover: $showingPopover)
 			}
 	}
 		.navigationTitle("Movie")

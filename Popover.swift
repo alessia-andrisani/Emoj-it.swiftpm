@@ -11,6 +11,16 @@ struct Popover: View {
 	
 	@Binding var showingPopover: Bool
 	
+	@EnvironmentObject var levelStore: LevelStore
+	
+	 var book: Book
+	
+	var index: Int {
+		 let bookIndex = levelStore.books.firstIndex(where:  {$0.id == book.id } )!
+			return bookIndex
+	 
+	}
+	
 	var body: some View {
 		ZStack {
 		ZStack(alignment: .top) {
@@ -33,7 +43,7 @@ struct Popover: View {
 					.foregroundColor(.white)
 					.padding(.bottom, 3)
 					
-				Text("Level 1 completed ⭐️")
+				Text("Level \(index + 1) completed ⭐️")
 					.foregroundColor(.white)
 					
 			}
@@ -43,16 +53,16 @@ struct Popover: View {
 			VStack {
 				
 				VStack(alignment: .leading) {
-				Text("Movie/Book Title here")
+					Text("\(book.title)")
 					.font(.title)
 					.padding(.bottom)
-				Text("Genre: ")
+					Text("Genre: \(book.genre) ")
 					.font(.title2)
 					.padding(.vertical)
-				Text("Author/Director: ")
+					Text("Author: \(book.author)")
 					.font(.title2)
 					.padding(.vertical)
-				Text("Year: ")
+					Text("Year: \(book.date) ")
 					.font(.title2)
 					.padding(.vertical)
 				}

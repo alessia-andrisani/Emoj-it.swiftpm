@@ -10,7 +10,7 @@ import SwiftUI
 struct LevelsGridView: View {
 
 	
-	@StateObject var levelStore = LevelStore()
+	@EnvironmentObject var levelStore: LevelStore
 	
 	@Binding var userSelection: CategoryType
 	
@@ -29,20 +29,20 @@ struct LevelsGridView: View {
 						
 						
 						ForEach (levelStore.books.filter({$0.isForKids == false }), id: \.id) { book in
-							BookItem(levelStore: levelStore, icon: "📙", color: .lightColor, book: book)
+							BookItem(icon: "📙", color: .lightColor, book: book)
 						}
 					} else {
 						ForEach (levelStore.movies.filter({$0.isForKids == false }), id: \.id) { movie in
-							MovieItem(levelStore: levelStore, icon: "🎬", color: .lightColor, movie: movie)
+							MovieItem(icon: "🎬", color: .lightColor, movie: movie)
 						}
 					}
 				}
 				.padding()
 				
 				if userSelection == .books {
-					KidsSection(levelStore: levelStore, userSelection: $userSelection, icon: "📙")
+					KidsSection(userSelection: $userSelection, icon: "📙")
 				} else {
-					KidsSection(levelStore: levelStore, userSelection: $userSelection, icon: "🎬")
+					KidsSection(userSelection: $userSelection, icon: "🎬")
 					
 				}
 			}

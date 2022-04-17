@@ -9,9 +9,9 @@ import SwiftUI
 
 struct KidsSection: View {
 	
-//	@ObservedObject var bookStore: BookStore
+
 	
-	@ObservedObject var levelStore: LevelStore
+	@EnvironmentObject var levelStore: LevelStore
 	
 	@Binding var userSelection: CategoryType
 	
@@ -28,11 +28,11 @@ struct KidsSection: View {
 			LazyVGrid(columns: columns, spacing: 50) {
 				if userSelection == .books {
 					ForEach (levelStore.books.filter({$0.isForKids == true }), id: \.id) { book in
-						BookItem(levelStore: levelStore, color: .darkColor, book: book)
+						BookItem(color: .darkColor, book: book)
 					}
 				} else {
 					ForEach (levelStore.movies.filter({$0.isForKids == true }), id: \.id) { movie in
-						MovieItem(levelStore: levelStore, color: .darkColor, movie: movie)
+						MovieItem(color: .darkColor, movie: movie)
 					}
 					
 				}

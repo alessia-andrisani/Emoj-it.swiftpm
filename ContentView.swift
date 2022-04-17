@@ -2,10 +2,7 @@ import SwiftUI
 
 struct ContentView: View {
 	
-//	enum LevelType: String {
-//		case movies = "Movies"
-//		case books = "Books"
-//	}
+
 	
 	@State private var userSelection = CategoryType.books
 	
