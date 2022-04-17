@@ -21,4 +21,14 @@ extension String {
 		
 		return string 
 	}
+	
+	var wordCount: Int {
+		
+		let string = self
+		
+		let components = string.components(separatedBy: .whitespacesAndNewlines)
+		
+		return components.count
+		
+	}
 }

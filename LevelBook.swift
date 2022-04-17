@@ -42,7 +42,7 @@ struct LevelBook: View {
 						checkAnswer()
 						
 				}
-				Text("Number of words: ")
+			Text("Number of words: \(book.title.wordCount)")
 				.font(.title2)
 				.fontWeight(.medium)
 			Spacer()
