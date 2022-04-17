@@ -9,7 +9,7 @@ import SwiftUI
 
 struct LevelBook: View {
 
-	var book: Book 
+	@State var book: Book
 	
 	@State private var userInput = ""
 	
@@ -52,7 +52,9 @@ struct LevelBook: View {
 			if showingCard {
 				Color.black.opacity(0.6).ignoresSafeArea()
 					
-				CardBook(showingCard: $showingCard, book: book)
+				CardBook(showingCard: $showingCard, book: book) { nextBook in
+					book = nextBook
+				}
 			}
 	}
 		.navigationTitle("Book")

@@ -21,6 +21,8 @@ struct CardBook: View {
 	 
 	}
 	
+	var onNext: (Book) -> Void
+	
 	var body: some View {
 		ZStack {
 		ZStack(alignment: .top) {
@@ -69,6 +71,9 @@ struct CardBook: View {
 				
 				Button {
 					//Next
+					let nextBook = levelStore.books[index + 1]
+					
+					onNext(nextBook)
 					
 					showingCard = false
 					
