@@ -7,9 +7,9 @@
 
 import SwiftUI
 
-struct Popover: View {
+struct CardBook: View {
 	
-	@Binding var showingPopover: Bool
+	@Binding var showingCard: Bool
 	
 	@EnvironmentObject var levelStore: LevelStore
 	
@@ -29,7 +29,7 @@ struct Popover: View {
 				
 				Button {
 					//Dismiss
-					showingPopover = false
+					showingCard = false
 				} label: {
 					Image(systemName: "x.circle")
 						.foregroundColor(.black)
@@ -70,7 +70,7 @@ struct Popover: View {
 				Button {
 					//Next
 					
-					showingPopover = false
+					showingCard = false
 					
 				} label: {
 					ZStack {

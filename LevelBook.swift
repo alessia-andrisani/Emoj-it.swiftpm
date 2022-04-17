@@ -15,7 +15,7 @@ struct LevelBook: View {
 	
 	@State private var showingHint = false
 	
-	@State private var showingPopover = false
+	@State private var showingCard = false
 	
 	@EnvironmentObject var levelStore: LevelStore
 	
@@ -49,10 +49,10 @@ struct LevelBook: View {
 			Spacer()
 				
 		}
-			if showingPopover {
+			if showingCard {
 				Color.black.opacity(0.6).ignoresSafeArea()
 					
-				Popover(showingPopover: $showingPopover, book: book)
+				CardBook(showingCard: $showingCard, book: book)
 			}
 	}
 		.navigationTitle("Book")
@@ -100,7 +100,7 @@ struct LevelBook: View {
 		if userInput.normalized() == book.title.normalized() {
 			print("Correct!")
 			withAnimation {
-				showingPopover = true
+				showingCard = true
 			}
 		}
 	}
