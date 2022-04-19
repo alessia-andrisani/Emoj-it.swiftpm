@@ -122,7 +122,7 @@ struct LevelBook: View {
 	
 	func checkAnswer() {
 		if userInput.normalized() == book.title.normalized() {
-			print("Correct!")
+			
 			withAnimation {
 				showingCard = true
 			}
