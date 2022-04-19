@@ -37,9 +37,15 @@ let book4 = Book(id: UUID(), title: "To Kill a Mockingbird", author: "Harper Lee
 let book5 = Book(id: UUID(), title: "The Secret Garden", author: "Frances Hodgson Burnett", date: "1911", genre: "Novel", emojis: ["🤫","🌻","🌷","🌲"], hint: "The 10-year-old girl Mary Lennox is the protagonist of this novel, considered a classic for children.")
 let book6 = Book(id: UUID(), title: "Harry Potter and the Goblet of Fire", author: "J.K. Rowling", date: "2000", genre: "Fantasy", emojis: ["👦","⚡️","🍷","🔥"], hint: "Harry Potter is now in his 4th year at Hogwarts and is chosen as Triwizard Champion.")
 let book7 = Book(id: UUID(), title: "The Golden Compass", author: "Philip Pullman", date: "1995", genre: "Fantasy", emojis: ["🥇","🧭"], hint: "12-year-old Lyra Belacqua lives in Oxford with her daemon Pan.")
-let book8 = Book(id: UUID(), title: "Animal Farm", author: "George Orwell", date: "1945", genre: "Political Satire", emojis: ["🐷","🐶","🐓","🚜","👨‍🌾"], hint: "A group of  farm animals rebel against their human farmer to create a new society.")
-let book9 = Book(id: UUID(), title: "A Thousands Splendid Suns", author: "Khaled Hosseini", date: "2007", genre: "Novel", emojis: ["∞","🤩","☀️","☀️"], hint: "Mariam, the protagonist, lives on the outskirts of Herat with her mother.")
-let book10 = Book(id: UUID(), title: "The Plot against America", author: "Philip Roth", date: "2004", genre: "Alternative History", emojis: ["📖","⚔️","🇺🇸"], hint: "In an alternative history Charles Lindbergh defeats Franklin D. Roosevelt in the presidential election of 1940.")
+let book8 = Book(id: UUID(), title: "Wuthering Heights", author: "Emily Brontë", date: "1847", genre: "Novel", emojis: ["💨","🍃","🏔","🏔"], hint: "The main theme of this novel is the destructive love story between Heathcliff and Catherine.")
+
+let book9 = Book(id: UUID(), title: "Animal Farm", author: "George Orwell", date: "1945", genre: "Political Satire", emojis: ["🐷","🐶","🐓","🚜","👨‍🌾"], hint: "A group of  farm animals rebel against their human farmer to create a new society.")
+
+let book10 = Book(id: UUID(), title: "A Thousands Splendid Suns", author: "Khaled Hosseini", date: "2007", genre: "Novel", emojis: ["∞","🤩","☀️","☀️"], hint: "Mariam, the protagonist, lives on the outskirts of Herat with her mother.")
+
+
+
+//let book10 = Book(id: UUID(), title: "The Plot against America", author: "Philip Roth", date: "2004", genre: "Alternative History", emojis: ["📖","⚔️","🇺🇸"], hint: "In an alternative history Charles Lindbergh defeats Franklin D. Roosevelt in the presidential election of 1940.")
 
 
 //For Kids
