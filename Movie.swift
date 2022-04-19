@@ -32,30 +32,40 @@ let movie1 = Movie(id: UUID(), title: "Infinity War", director: "Anthony and Joe
 
 let movie2 = Movie(id: UUID(), title: "The dark knight", director: "Christopher Nolan", date: "2008", genre: "Action, Thriller", emojis: ["⚫️","🏇"], hint: "It is about a famous comics hero with a double identity and a faithful butler.")
 
-let movie3 = Movie(id: UUID(), title: "Star Wars", director: "George Lucas", date: "1977", genre: "Fantasy, Sci-Fi", emojis: ["🌟","⚔️","⚔️"], hint: "It is a famous saga made up of 9 episodes.")
 
-let movie4 = Movie(id: UUID(), title: "Back to the future", director: "Robert Zemeckis", date: "1985", genre: "Sci-Fi, Adventure", emojis: ["🔙","🔮"], hint: "The main character is Marty McFly played by Michael J. Fox.")
+let movie3 = Movie(id: UUID(), title: "The Golden Compass", director: "Chris Weitz", date: "2007", genre: "Fantasy", emojis: ["🥇","🧭"], hint: "12-year-old Lyra Belacqua lives in Oxford with her daemon Pan.")
 
-let movie5 = Movie(id: UUID(), title: "Singing in the rain", director: "Stanley Donen, Gene Kelly", date: "1952", genre: "Musical", emojis: ["🎤","🎶","⤵️","☔️"], hint: "Famous musical of the 50’s with Gene Kelly and Donald O’Connor.")
+let movie4 = Movie(id: UUID(), title: "Star Wars", director: "George Lucas", date: "1977", genre: "Fantasy, Sci-Fi", emojis: ["🌟","⚔️","⚔️"], hint: "It is a famous saga made up of 9 episodes.")
 
-let movie6 = Movie(id: UUID(), title: "Once upon a time in the West", director: "Sergio Leone", date: "1968", genre: "Western", emojis: ["1️⃣","🕛","⤵️","🤠"], hint: "Italian western movie considered among the best ones ever made.")
+let movie5 = Movie(id: UUID(), title: "Back to the future", director: "Robert Zemeckis", date: "1985", genre: "Sci-Fi, Adventure", emojis: ["🔙","🔮"], hint: "The main character is Marty McFly played by Michael J. Fox.")
 
-let movie7 = Movie(id: UUID(), title: """
+let movie6 = Movie(id: UUID(), title: "Singing in the rain", director: "Stanley Donen, Gene Kelly", date: "1952", genre: "Musical", emojis: ["🎤","🎶","⤵️","☔️"], hint: "Famous musical of the 50’s with Gene Kelly and Donald O’Connor.")
+
+let movie7 = Movie(id: UUID(), title: "Once upon a time in the West", director: "Sergio Leone", date: "1968", genre: "Western", emojis: ["1️⃣","🕛","⤵️","🤠"], hint: "Italian western movie considered among the best ones ever made.")
+
+
+
+let movie8 = Movie(id: UUID(), title: """
  Harry Potter
- and the deathly Hallows
-""", director: "David Yates", date: "2007", genre: "Fantasy", emojis: ["👦","⚡️","☠️","🎁","🎁"], hint: "The last movie about the most famous wizard with rounded glasses.")
+ and the Goblet of Fire
+""", director: "Mike Newell", date: "2005", genre: "Fantasy", emojis: ["👦","⚡️","🍷","🔥"], hint: "Harry Potter is now in his 4th year at Hogwarts and is chosen as Triwizard Champion. ")
 
-let movie8 = Movie(id: UUID(), title: "The wolf of Wall Street", director: "Martin Scorsese", date: "2013", genre: "Biography, Dramatic, Comedy", emojis: ["🐺","🧱","🛣","💰"], hint: "Leonardo DiCaprio is the protagonist and plays an unscrupulous broker of New York.")
+let movie9 = Movie(id: UUID(), title: "The wolf of Wall Street", director: "Martin Scorsese", date: "2013", genre: "Biography, Dramatic, Comedy", emojis: ["🐺","🧱","🛣","💰"], hint: "Leonardo DiCaprio is the protagonist and plays an unscrupulous broker of New York.")
 
-let movie9 = Movie(id: UUID(), title: """
+let movie10 = Movie(id: UUID(), title: """
  Fantastic Beasts
  and where to find them
 """, director: "David Yates", date: "2016", genre: "Fantasy", emojis: ["🤩","🦄","🐲","❓","🔎","🦄","🐲"], hint: "Spin-off of the Harry Potter series with magical creatures.")
 
-let movie10 = Movie(id: UUID(), title: """
- Indiana Jones and the Kingdom
- of the Crystal Skull
-""", director: "Steven Spielberg", date: "2008", genre: "Adventure, Action", emojis: ["🤠","🏞","👑","💀","💎"], hint: "Fourth chapter of the adventures of the famous archeologist played by Harrison Ford.")
+
+
+
+
+
+//let movie10 = Movie(id: UUID(), title: """
+// Indiana Jones and the Kingdom
+// of the Crystal Skull
+//""", director: "Steven Spielberg", date: "2008", genre: "Adventure, Action", emojis: ["🤠","🏞","👑","💀","💎"], hint: "Fourth chapter of the adventures of the famous archeologist played by Harrison Ford.")
 
 
 
