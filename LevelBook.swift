@@ -129,6 +129,7 @@ struct LevelBook: View {
 				showingCard = true
 			}
 			userInput = ""
+			showingHint = false 
 		} else {
 			textFieldIsFocused = true
 			withAnimation {

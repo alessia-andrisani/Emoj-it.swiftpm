@@ -129,6 +129,7 @@ struct LevelMovie: View {
 				showingCard = true
 			}
 			userInput = ""
+			showingHint = false 
 		} else {
 			
 			textFieldIsFocused = true
