@@ -120,7 +120,7 @@ struct LevelMovie: View {
 	}
 	func checkAnswer() {
 		if userInput.normalized() == movie.title.normalized() {
-			print("Correct!")
+			
 			withAnimation {
 				showingCard = true
 			}
