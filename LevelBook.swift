@@ -104,6 +104,7 @@ struct LevelBook: View {
 			withAnimation {
 				showingCard = true
 			}
+			userInput = ""
 		}
 	}
 }

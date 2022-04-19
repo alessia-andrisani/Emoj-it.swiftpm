@@ -2,26 +2,26 @@
 //  File.swift
 //  Emoj-it
 //
-//  Created by Alessia Andrisani on 14/04/22.
+//  Created by Alessia Andrisani on 19/04/22.
 //
 
 import SwiftUI
 
-struct CardBook: View {
+struct CardMovie: View {
 	
 	@Binding var showingCard: Bool
 	
 	@EnvironmentObject var levelStore: LevelStore
 	
-	var book: Book
+	var movie: Movie
 	
 	var index: Int {
-		let bookIndex = levelStore.books.firstIndex(where:  {$0.id == book.id } )!
-		return bookIndex
+		let movieIndex = levelStore.movies.firstIndex(where:  {$0.id == movie.id } )!
+		return movieIndex
 		
 	}
 	
-	var onNext: (Book) -> Void
+	var onNext: (Movie) -> Void
 	
 	var body: some View {
 		ZStack {
@@ -55,25 +55,25 @@ struct CardBook: View {
 			VStack {
 				
 				VStack(alignment: .leading) {
-					Text("\(book.title)")
+					Text("\(movie.title)")
 						.font(.title)
 						.padding(.bottom)
-					Text("Genre: \(book.genre) ")
+					Text("Genre: \(movie.genre) ")
 						.font(.title2)
 						.padding(.vertical)
-					Text("Author: \(book.author)")
+					Text("Author: \(movie.director)")
 						.font(.title2)
 						.padding(.vertical)
-					Text("Year: \(book.date) ")
+					Text("Year: \(movie.date) ")
 						.font(.title2)
 						.padding(.vertical)
 				}
 				
 				Button {
 					//Next
-					let nextBook = levelStore.books[index + 1]
+					let nextMovie = levelStore.movies[index + 1]
 					
-					onNext(nextBook)
+					onNext(nextMovie)
 					
 					showingCard = false
 					
@@ -110,9 +110,10 @@ struct CardBook: View {
 		}
 		.transition(.asymmetric(insertion: .scale, removal: .identity))
 		.onAppear {
-			levelStore.books[index].isCompleted = true
+			levelStore.movies[index].isCompleted = true
 		}
 		
 	}
 }
+
 

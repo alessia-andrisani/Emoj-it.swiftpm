@@ -9,13 +9,13 @@ import SwiftUI
 
 struct LevelMovie: View {
 	
-	var movie: Movie
+	@State var movie: Movie
 	
 	@State private var userInput = ""
 	
 	@State private var showingHint = false
 	
-	@State private var showingPopover = false
+	@State private var showingCard = false
 	
 	var body: some View {
 		ZStack {
@@ -35,24 +35,23 @@ struct LevelMovie: View {
 				.padding()
 				.frame(width: UIScreen.main.bounds.width / 1.9, height: UIScreen.main.bounds.height / 20)
 				.overlay(RoundedRectangle(cornerRadius: 19).stroke())
-				.onSubmit { //TODO: Only if the answer is correct
-					withAnimation {
-					showingPopover = true
-					}
+				.onSubmit {
+					checkAnswer()
 				}
-			Text("Number of words: ")
+			Text("Number of words: \(movie.title.wordCount)")
 			.font(.title2)
 			.fontWeight(.medium)
 			Spacer()
 			Spacer()
 				
 		}
-			if showingPopover {
+			if showingCard {
 				Color.black.opacity(0.6).ignoresSafeArea()
 				
-				//TODO: maybe two popover for movielevel and booklevel?
-				
-//				Popover(showingPopover: $showingPopover)
+				CardMovie(showingCard: $showingCard, movie: movie) { nextMovie in
+					movie = nextMovie
+				}
+	
 			}
 	}
 		.navigationTitle("Movie")
@@ -94,5 +93,14 @@ struct LevelMovie: View {
 			}
 		}
 		
+	}
+	func checkAnswer() {
+		if userInput.normalized() == movie.title.normalized() {
+			print("Correct!")
+			withAnimation {
+				showingCard = true
+			}
+			userInput = ""
+		}
 	}
 }
