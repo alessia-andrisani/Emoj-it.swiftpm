@@ -42,7 +42,7 @@ struct ContentView: View {
 					
 				Text("Books 📙")
 					.font(.largeTitle)
-					.foregroundColor(.primary)
+					.foregroundColor(.black)
 					.fontWeight(.medium)
 					.padding()
 					.frame(width: 464, height: 101)

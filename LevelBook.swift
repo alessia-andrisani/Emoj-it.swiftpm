@@ -9,8 +9,8 @@ import SwiftUI
 
 struct LevelBook: View {
 	
-	 
-
+	@EnvironmentObject var levelStore: LevelStore
+	
 	@State var book: Book
 	
 	@State private var userInput = ""
@@ -21,7 +21,14 @@ struct LevelBook: View {
 	
 	@State private var showingCard = false
 	
-	@EnvironmentObject var levelStore: LevelStore
+	@FocusState var textFieldIsFocused: Bool
+	
+	var bookIndex: Int {
+		let bookIndex = levelStore.books.firstIndex(where:  {$0.id == book.id } )!
+		return bookIndex
+		
+	}
+	
 	
 	var body: some View {
 		ZStack {
@@ -42,6 +49,7 @@ struct LevelBook: View {
 				.font(.title3)
 				.frame(width: UIScreen.main.bounds.width / 1.9, height: UIScreen.main.bounds.height / 20)
 				.overlay(RoundedRectangle(cornerRadius: 19).stroke())
+				.focused($textFieldIsFocused)
 				.onSubmit { 
 					
 						checkAnswer()
@@ -68,7 +76,7 @@ struct LevelBook: View {
 				}
 			}
 	}
-		.navigationTitle("Book")
+		.navigationTitle(book.isForKids ? "Kids - Level \(bookIndex + 1)" : "Level \(bookIndex + 1)")
 		.navigationBarTitleDisplayMode(.inline)
 		
 		.toolbar {
@@ -84,23 +92,24 @@ struct LevelBook: View {
 				
 					VStack {
 						Text("Get a hint")
-							.font(.title)
+							.font(.title3)
 							.onTapGesture {
 								
 								showingHint = true
-								print(book.hint)
+								
 							}
 						
 						Divider()
 
 
 						Text("See the solution")
-							.font(.title)
+							.font(.title3)
 							.onTapGesture {
 							
 								userInput = book.title
-								showingHelp = false 
-								print(book.title)
+								showingHelp = false
+								textFieldIsFocused = true
+								
 							}
 
 					}

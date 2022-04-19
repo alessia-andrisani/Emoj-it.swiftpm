@@ -9,6 +9,7 @@ import SwiftUI
 
 struct LevelMovie: View {
 	
+	@EnvironmentObject var levelStore: LevelStore
 	
 	@State var movie: Movie
 	
@@ -20,7 +21,13 @@ struct LevelMovie: View {
 	
 	@State private var showingCard = false
 	
+	@FocusState var textFieldIsFocused: Bool
 	
+	var movieIndex: Int {
+		let movieIndex = levelStore.movies.firstIndex(where:  {$0.id == movie.id } )!
+		return movieIndex
+		
+	}
 	
 	var body: some View {
 		ZStack {
@@ -41,6 +48,7 @@ struct LevelMovie: View {
 				.font(.title3)
 				.frame(width: UIScreen.main.bounds.width / 1.9, height: UIScreen.main.bounds.height / 20)
 				.overlay(RoundedRectangle(cornerRadius: 19).stroke())
+				.focused($textFieldIsFocused)
 				.onSubmit {
 					checkAnswer()
 				}
@@ -66,7 +74,7 @@ struct LevelMovie: View {
 	
 			}
 	}
-		.navigationTitle("Movie")
+		.navigationTitle(movie.isForKids ? "Kids - Level \(movieIndex + 1)" : "Level \(movieIndex + 1)")
 		.navigationBarTitleDisplayMode(.inline)
 		
 		.toolbar {
@@ -82,24 +90,25 @@ struct LevelMovie: View {
 				
 					VStack {
 						Text("Get a hint")
-							.font(.title)
+							.font(.title3)
 							.onTapGesture {
 								
 								showingHint = true
 								
-								print(movie.hint)
+								
 							}
 						
 						Divider()
 
 
 						Text("See the solution")
-							.font(.title)
+							.font(.title3)
 							.onTapGesture {
 								
 								userInput = movie.title
 								showingHelp = false
-								print(movie.title)
+								textFieldIsFocused = true 
+								
 							}
 
 					}

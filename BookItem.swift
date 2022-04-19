@@ -48,7 +48,7 @@ struct BookItem: View {
 					.font(.title)
 					.padding()
 					.padding(.bottom, 25)
-					.foregroundColor(.primary)
+					.foregroundColor(.black)
 			}
 		}
 		.padding()

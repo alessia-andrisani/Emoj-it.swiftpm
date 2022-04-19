@@ -71,6 +71,7 @@ struct CardBook: View {
 						.font(.title2)
 						.padding(.vertical)
 				}
+				.foregroundColor(.black)
 				
 				Button {
 					//Next
