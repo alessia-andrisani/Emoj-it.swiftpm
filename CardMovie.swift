@@ -9,6 +9,8 @@ import SwiftUI
 
 struct CardMovie: View {
 	
+	@Environment (\.dismiss) var dismiss
+	
 	@Binding var showingCard: Bool
 	
 	@EnvironmentObject var levelStore: LevelStore
@@ -93,7 +95,8 @@ struct CardMovie: View {
 				.offset(y: 65)
 				
 				Button {
-					//Back to levels
+					
+					dismiss()
 				} label: {
 					HStack {
 						Image(systemName: "arrowshape.turn.up.backward.fill")

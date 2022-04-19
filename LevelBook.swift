@@ -8,10 +8,14 @@
 import SwiftUI
 
 struct LevelBook: View {
+	
+	 
 
 	@State var book: Book
 	
 	@State private var userInput = ""
+	
+	@State private var showingHelp = false
 	
 	@State private var showingHint = false
 	
@@ -33,8 +37,9 @@ struct LevelBook: View {
 				.background(Color.lightColor)
 				.cornerRadius(19)
 			
-			TextField("Write your guess here...", text: $userInput)
+			TextField("Type book title here...", text: $userInput)
 				.padding()
+				.font(.largeTitle)
 				.frame(width: UIScreen.main.bounds.width / 1.9, height: UIScreen.main.bounds.height / 20)
 				.overlay(RoundedRectangle(cornerRadius: 19).stroke())
 				.onSubmit { 
@@ -45,6 +50,11 @@ struct LevelBook: View {
 			Text("Number of words: \(book.title.wordCount)")
 				.font(.title2)
 				.fontWeight(.medium)
+			
+			if showingHint {
+			Text("Hint: \(book.hint)")
+				.font(.title2)
+			}
 			Spacer()
 			Spacer()
 				
@@ -63,30 +73,31 @@ struct LevelBook: View {
 		.toolbar {
 			ToolbarItem(placement: .navigationBarTrailing){
 				Button {
-					showingHint = true
+					showingHelp = true
 				} label: {
 					Text("💡")
 						.font(.largeTitle)
 				}
-				.popover(isPresented: $showingHint) {
+				.popover(isPresented: $showingHelp) {
 					
 				
 					VStack {
-						Text("This is a hint...")
+						Text("Get a hint")
 							.font(.title)
 							.onTapGesture {
-								//TODO: Show hint here
 								
+								showingHint = true
 								print(book.hint)
 							}
 						
 						Divider()
 
 
-						Text("See the solution...")
+						Text("See the solution")
 							.font(.title)
 							.onTapGesture {
-								//TODO: show the title here
+							
+								userInput = book.title
 								print(book.title)
 							}
 
