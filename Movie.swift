@@ -40,13 +40,22 @@ let movie5 = Movie(id: UUID(), title: "Singing in the rain", director: "Stanley 
 
 let movie6 = Movie(id: UUID(), title: "Once upon a time in the West", director: "Sergio Leone", date: "1968", genre: "Western", emojis: ["1️⃣","🕛","⤵️","🤠"], hint: "Italian western movie considered among the best ones ever made.")
 
-let movie7 = Movie(id: UUID(), title: "Harry Potter and the deathly Hallows", director: "David Yates", date: "2007", genre: "Fantasy", emojis: ["👦","⚡️","☠️","🎁","🎁"], hint: "The last movie about the most famous wizard with rounded glasses.")
+let movie7 = Movie(id: UUID(), title: """
+ Harry Potter
+ and the deathly Hallows
+""", director: "David Yates", date: "2007", genre: "Fantasy", emojis: ["👦","⚡️","☠️","🎁","🎁"], hint: "The last movie about the most famous wizard with rounded glasses.")
 
 let movie8 = Movie(id: UUID(), title: "The wolf of Wall Street", director: "Martin Scorsese", date: "2013", genre: "Biography, Dramatic, Comedy", emojis: ["🐺","🧱","🛣","💰"], hint: "Leonardo DiCaprio is the protagonist and plays an unscrupulous broker of New York.")
 
-let movie9 = Movie(id: UUID(), title: "Fantastic Beasts and where to find them", director: "David Yates", date: "2016", genre: "Fantasy", emojis: ["🤩","🦄","🐲","❓","🔎","🦄","🐲"], hint: "Spin-off of the Harry Potter series with magical creatures.")
+let movie9 = Movie(id: UUID(), title: """
+ Fantastic Beasts
+ and where to find them
+""", director: "David Yates", date: "2016", genre: "Fantasy", emojis: ["🤩","🦄","🐲","❓","🔎","🦄","🐲"], hint: "Spin-off of the Harry Potter series with magical creatures.")
 
-let movie10 = Movie(id: UUID(), title: "Indiana Jones and the Kingdom of the Crystal Skull", director: "Steven Spielberg", date: "2008", genre: "Adventure, Action", emojis: ["🤠","🏞","👑","💀","💎"], hint: "Fourth chapter of the adventures of the famous archeologist played by Harrison Ford.")
+let movie10 = Movie(id: UUID(), title: """
+ Indiana Jones and the Kingdom
+ of the Crystal Skull
+""", director: "Steven Spielberg", date: "2008", genre: "Adventure, Action", emojis: ["🤠","🏞","👑","💀","💎"], hint: "Fourth chapter of the adventures of the famous archeologist played by Harrison Ford.")
 
 
 

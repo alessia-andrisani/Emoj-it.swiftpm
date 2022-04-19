@@ -60,6 +60,7 @@ struct CardBook: View {
 					Text("\(book.title)")
 						.font(.title)
 						.padding(.bottom)
+						.multilineTextAlignment(.center)
 					Text("Genre: \(book.genre) ")
 						.font(.title2)
 						.padding(.vertical)
@@ -73,12 +74,16 @@ struct CardBook: View {
 				
 				Button {
 					//Next
-					let nextBook = levelStore.books[bookIndex + 1]
-					
-					onNext(nextBook)
-					
+					if !isGameOver() {
+						let nextBook = levelStore.books[bookIndex + 1]
+						
+						onNext(nextBook)
+						
+						
+					} else {
+						dismiss()
+					}
 					showingCard = false
-					
 				} label: {
 					ZStack {
 						RoundedRectangle(cornerRadius: 8)
@@ -86,29 +91,29 @@ struct CardBook: View {
 							.foregroundColor(Color.darkColor)
 						
 						
-						Text("Next")
+						Text(!isGameOver() ? "Next": "Back to Levels")
 							.foregroundColor(.white)
 							.font(.largeTitle)
 					}
 					
 				}
 				.offset(y: 65)
-				
-				Button {
-					
-					dismiss()
-					
-				} label: {
-					HStack {
-						Image(systemName: "arrowshape.turn.up.backward.fill")
-							.foregroundColor(.black)
-						Text("Back to levels")
-							.foregroundColor(.black)
-							.font(.headline)
+				if !isGameOver() {
+					Button {
+						
+						dismiss()
+						
+					} label: {
+						HStack {
+							Image(systemName: "arrowshape.turn.up.backward.fill")
+								.foregroundColor(.black)
+							Text("Back to levels")
+								.foregroundColor(.black)
+								.font(.headline)
+						}
 					}
+					.offset(y: 85)
 				}
-				.offset(y: 85)
-				
 			}
 			
 		}
@@ -116,6 +121,10 @@ struct CardBook: View {
 		.onAppear {
 			levelStore.books[bookIndex].isCompleted = true
 		}
+		
+	}
+	func isGameOver() -> Bool {
+		bookIndex == 9 || bookIndex == 19
 		
 	}
 }

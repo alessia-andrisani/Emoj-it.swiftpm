@@ -53,7 +53,10 @@ let book10 = Book(id: UUID(), title: "A Thousands Splendid Suns", author: "Khale
 let book11 = Book(id: UUID(), title: "The Jungle Book", author: "Rudyard Kipling", date: "1894", genre: "Novel", isForKids: true, emojis: ["🌴","📖"], hint: "The young Mowgli is the protagonist and lives in the jungle.")
 let book12 = Book(id: UUID(), title: "Never ending story", author: "Michael Ende", date: "1979", genre: "Fantasy", isForKids: true, emojis: ["∞","📖"], hint: "The young Bastian finds a book set in the magical land of Fantastica.")
 let book13 = Book(id: UUID(), title: "The Sword in the stone", author: "T.H. White", date: "1938", genre: "Fantasy", isForKids: true, emojis: ["🗡","⤵️","🪨"], hint: "The young Wart meets the wizard Merlyn who starts training him to become king.")
-let book14 = Book(id: UUID(), title: "Harry Potter and the chamber of Secrets", author: "J.K. Rowling", date: "1998", genre: "Fantasy", isForKids: true, emojis: ["👦","⚡️","🛌","🤫"], hint: "The house-elf Dobby tries to stop Harry from going back to Hogwarts for his second year of school. ")
+let book14 = Book(id: UUID(), title: """
+ Harry Potter
+ and the chamber of Secrets
+""", author: "J.K. Rowling", date: "1998", genre: "Fantasy", isForKids: true, emojis: ["👦","⚡️","🛌","🤫"], hint: "The house-elf Dobby tries to stop Harry from going back to Hogwarts for his second year of school. ")
 let book15 = Book(id: UUID(), title: "The little prince", author: "Antoine de Saint-Exupéry", date: "1943", genre: "Novel", isForKids: true, emojis: ["👦","👑"], hint: "The young protagonist has golden hair and when he meets an aviator in the Sahara, starts asking him questions.")
 let book16 = Book(id: UUID(), title: "Charlie and the chocolate factory", author: "Roald Dahl", date: "1964", genre: "Novel", isForKids: true, emojis: ["👦","🍫","🏭"], hint: "Charlie finds one of the golden tickets and visits Willy Wonka’s factory.")
 let book17 = Book(id: UUID(), title: "Treasure island", author: "Robert Louis Stevenson", date: "1883", genre: "Adventure", isForKids: true, emojis: ["💎","👑","⚱️","🏝"], hint: "Some pirates led by Long John Silver set sail to find a precious treasure.")

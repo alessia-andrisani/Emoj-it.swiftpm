@@ -9,6 +9,7 @@ import SwiftUI
 
 struct LevelMovie: View {
 	
+	
 	@State var movie: Movie
 	
 	@State private var userInput = ""
@@ -18,6 +19,8 @@ struct LevelMovie: View {
 	@State private var showingHint = false
 	
 	@State private var showingCard = false
+	
+	
 	
 	var body: some View {
 		ZStack {
@@ -35,7 +38,7 @@ struct LevelMovie: View {
 			
 			TextField("Type movie title here...", text: $userInput)
 				.padding()
-				.font(.largeTitle)
+				.font(.title3)
 				.frame(width: UIScreen.main.bounds.width / 1.9, height: UIScreen.main.bounds.height / 20)
 				.overlay(RoundedRectangle(cornerRadius: 19).stroke())
 				.onSubmit {
@@ -48,6 +51,7 @@ struct LevelMovie: View {
 			if showingHint {
 			Text("Hint: \(movie.hint)")
 				.font(.title2)
+				.lineLimit(nil)
 			}
 			Spacer()
 			Spacer()
@@ -114,4 +118,5 @@ struct LevelMovie: View {
 			userInput = ""
 		}
 	}
+	
 }

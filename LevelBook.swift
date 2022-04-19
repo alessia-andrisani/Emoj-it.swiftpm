@@ -39,7 +39,7 @@ struct LevelBook: View {
 			
 			TextField("Type book title here...", text: $userInput)
 				.padding()
-				.font(.largeTitle)
+				.font(.title3)
 				.frame(width: UIScreen.main.bounds.width / 1.9, height: UIScreen.main.bounds.height / 20)
 				.overlay(RoundedRectangle(cornerRadius: 19).stroke())
 				.onSubmit { 
@@ -54,6 +54,7 @@ struct LevelBook: View {
 			if showingHint {
 			Text("Hint: \(book.hint)")
 				.font(.title2)
+				.lineLimit(nil)
 			}
 			Spacer()
 			Spacer()

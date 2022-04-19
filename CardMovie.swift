@@ -60,6 +60,8 @@ struct CardMovie: View {
 					Text("\(movie.title)")
 						.font(.title)
 						.padding(.bottom)
+						.multilineTextAlignment(.center)
+						
 					Text("Genre: \(movie.genre) ")
 						.font(.title2)
 						.padding(.vertical)
@@ -73,12 +75,17 @@ struct CardMovie: View {
 				
 				Button {
 					//Next
-					let nextMovie = levelStore.movies[movieIndex + 1]
-					
-					onNext(nextMovie)
-					
+					if !isGameOver() {
+						
+						let nextMovie = levelStore.movies[movieIndex + 1]
+						
+						onNext(nextMovie)
+					} else {
+						
+						dismiss()
+						
+					}
 					showingCard = false
-					
 				} label: {
 					ZStack {
 						RoundedRectangle(cornerRadius: 8)
@@ -86,7 +93,7 @@ struct CardMovie: View {
 							.foregroundColor(Color.darkColor)
 						
 						
-						Text("Next")
+						Text(!isGameOver() ? "Next": "Back to Levels")
 							.foregroundColor(.white)
 							.font(.largeTitle)
 					}
@@ -94,6 +101,7 @@ struct CardMovie: View {
 				}
 				.offset(y: 65)
 				
+				if !isGameOver() {
 				Button {
 					
 					dismiss()
@@ -107,7 +115,7 @@ struct CardMovie: View {
 					}
 				}
 				.offset(y: 85)
-				
+				}
 			}
 			
 		}
@@ -116,6 +124,10 @@ struct CardMovie: View {
 			levelStore.movies[movieIndex].isCompleted = true
 		}
 		
+	}
+	func isGameOver() -> Bool {
+		 movieIndex == 9 || movieIndex == 19
+			
 	}
 }
 
