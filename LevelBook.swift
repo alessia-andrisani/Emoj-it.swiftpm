@@ -23,6 +23,8 @@ struct LevelBook: View {
 	
 	@FocusState var textFieldIsFocused: Bool
 	
+	@State private var shakeAnimation = false
+	
 	var bookIndex: Int {
 		let bookIndex = levelStore.books.firstIndex(where:  {$0.id == book.id } )!
 		return bookIndex
@@ -50,10 +52,10 @@ struct LevelBook: View {
 				.frame(width: UIScreen.main.bounds.width / 1.9, height: UIScreen.main.bounds.height / 20)
 				.overlay(RoundedRectangle(cornerRadius: 19).stroke())
 				.focused($textFieldIsFocused)
-				.onSubmit { 
-					
+				.offset(x: shakeAnimation ? -8 : 0)
+				.animation(.default.repeatCount(3, autoreverses: true), value: shakeAnimation)
+				.onSubmit {
 						checkAnswer()
-						
 				}
 			Text("Number of words: \(book.title.wordCount)")
 				.font(.title2)
@@ -127,6 +129,18 @@ struct LevelBook: View {
 				showingCard = true
 			}
 			userInput = ""
+		} else {
+			textFieldIsFocused = true
+			withAnimation {
+				
+				
+				shakeAnimation = true
+				
+				DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
+					
+					shakeAnimation = false
+				}
+			}
 		}
 	}
 }

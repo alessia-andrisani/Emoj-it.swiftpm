@@ -23,6 +23,8 @@ struct LevelMovie: View {
 	
 	@FocusState var textFieldIsFocused: Bool
 	
+	@State private var shakeAnimation = false
+	
 	var movieIndex: Int {
 		let movieIndex = levelStore.movies.firstIndex(where:  {$0.id == movie.id } )!
 		return movieIndex
@@ -48,6 +50,8 @@ struct LevelMovie: View {
 				.font(.title3)
 				.frame(width: UIScreen.main.bounds.width / 1.9, height: UIScreen.main.bounds.height / 20)
 				.overlay(RoundedRectangle(cornerRadius: 19).stroke())
+				.offset(x: shakeAnimation ? -8 : 0)
+				.animation(.default.repeatCount(3, autoreverses: true), value: shakeAnimation)
 				.focused($textFieldIsFocused)
 				.onSubmit {
 					checkAnswer()
@@ -125,6 +129,19 @@ struct LevelMovie: View {
 				showingCard = true
 			}
 			userInput = ""
+		} else {
+			
+			textFieldIsFocused = true
+			withAnimation {
+				
+				
+				shakeAnimation = true
+				
+				DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
+					
+					shakeAnimation = false
+				}
+			}
 		}
 	}
 	
