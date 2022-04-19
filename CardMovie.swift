@@ -17,7 +17,7 @@ struct CardMovie: View {
 	
 	var movie: Movie
 	
-	var index: Int {
+	var movieIndex: Int {
 		let movieIndex = levelStore.movies.firstIndex(where:  {$0.id == movie.id } )!
 		return movieIndex
 		
@@ -47,7 +47,7 @@ struct CardMovie: View {
 						.foregroundColor(.white)
 						.padding(.bottom, 3)
 					
-					Text("Level \(index + 1) completed ⭐️")
+					Text("Level \(movieIndex + 1) completed ⭐️")
 						.foregroundColor(.white)
 					
 				}
@@ -73,7 +73,7 @@ struct CardMovie: View {
 				
 				Button {
 					//Next
-					let nextMovie = levelStore.movies[index + 1]
+					let nextMovie = levelStore.movies[movieIndex + 1]
 					
 					onNext(nextMovie)
 					
@@ -113,7 +113,7 @@ struct CardMovie: View {
 		}
 		.transition(.asymmetric(insertion: .scale, removal: .identity))
 		.onAppear {
-			levelStore.movies[index].isCompleted = true
+			levelStore.movies[movieIndex].isCompleted = true
 		}
 		
 	}

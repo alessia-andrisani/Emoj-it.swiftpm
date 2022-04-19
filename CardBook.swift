@@ -17,7 +17,7 @@ struct CardBook: View {
 	
 	var book: Book
 	
-	var index: Int {
+	var bookIndex: Int {
 		let bookIndex = levelStore.books.firstIndex(where:  {$0.id == book.id } )!
 		return bookIndex
 		
@@ -47,7 +47,7 @@ struct CardBook: View {
 						.foregroundColor(.white)
 						.padding(.bottom, 3)
 					
-					Text("Level \(index + 1) completed ⭐️")
+					Text("Level \(bookIndex + 1) completed ⭐️")
 						.foregroundColor(.white)
 					
 				}
@@ -73,7 +73,7 @@ struct CardBook: View {
 				
 				Button {
 					//Next
-					let nextBook = levelStore.books[index + 1]
+					let nextBook = levelStore.books[bookIndex + 1]
 					
 					onNext(nextBook)
 					
@@ -114,7 +114,7 @@ struct CardBook: View {
 		}
 		.transition(.asymmetric(insertion: .scale, removal: .identity))
 		.onAppear {
-			levelStore.books[index].isCompleted = true
+			levelStore.books[bookIndex].isCompleted = true
 		}
 		
 	}

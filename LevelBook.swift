@@ -98,6 +98,7 @@ struct LevelBook: View {
 							.onTapGesture {
 							
 								userInput = book.title
+								showingHelp = false 
 								print(book.title)
 							}
 

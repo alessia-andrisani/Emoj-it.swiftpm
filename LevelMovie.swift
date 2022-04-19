@@ -82,6 +82,7 @@ struct LevelMovie: View {
 							.onTapGesture {
 								
 								showingHint = true
+								
 								print(movie.hint)
 							}
 						
@@ -93,6 +94,7 @@ struct LevelMovie: View {
 							.onTapGesture {
 								
 								userInput = movie.title
+								showingHelp = false
 								print(movie.title)
 							}
 
