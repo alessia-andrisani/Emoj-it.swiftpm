@@ -2,62 +2,64 @@ import SwiftUI
 
 struct ContentView: View {
 	
-
-	
 	@State private var userSelection = CategoryType.books
 	
 	@State private var navigateToMovieView = false
 	
 	@State private var navigateToBookView = false
 	
-    var body: some View {
+	//	@AppStorage("showOnboarding") private var showOnboarding = true
+	@State private var showOnboarding = true
+	
+	
+	var body: some View {
 		NavigationView {
 			ZStack {
 				
-			VStack {
-				
-				
-				NavigationLink(isActive: $navigateToMovieView) {  LevelsGridView(userSelection: $userSelection) } label: {
-				
-				Text("Movies 🎬")
-					.font(.largeTitle)
-					.foregroundColor(.black)
-					.fontWeight(.medium)
-					.padding()
-					.frame(width: 464, height: 101)
-					.background(Color.lightColor)
-					.clipShape(RoundedRectangle(cornerRadius: 19))
-					.padding()
-					.onTapGesture {
-						userSelection = CategoryType.movies
+				VStack {
+					
+					
+					NavigationLink(isActive: $navigateToMovieView) {  LevelsGridView(userSelection: $userSelection) } label: {
 						
-						Timer.scheduledTimer(withTimeInterval: 0.1, repeats: false) { _ in
-							navigateToMovieView = true
-						}
+						Text("Movies 🎬")
+							.font(.largeTitle)
+							.foregroundColor(.black)
+							.fontWeight(.medium)
+							.padding()
+							.frame(width: 464, height: 101)
+							.background(Color.lightColor)
+							.clipShape(RoundedRectangle(cornerRadius: 19))
+							.padding()
+							.onTapGesture {
+								userSelection = CategoryType.movies
+								
+								Timer.scheduledTimer(withTimeInterval: 0.1, repeats: false) { _ in
+									navigateToMovieView = true
+								}
+							}
+						
 					}
 					
-				}
-				
-				NavigationLink(isActive: $navigateToBookView) { LevelsGridView(userSelection: $userSelection) } label: {
-					
-				Text("Books 📙")
-					.font(.largeTitle)
-					.foregroundColor(.black)
-					.fontWeight(.medium)
-					.padding()
-					.frame(width: 464, height: 101)
-					.background(Color.lightColor)
-					.clipShape(RoundedRectangle(cornerRadius: 19))
-					.padding()
-					.onTapGesture {
-						userSelection = CategoryType.books
+					NavigationLink(isActive: $navigateToBookView) { LevelsGridView(userSelection: $userSelection) } label: {
 						
-						Timer.scheduledTimer(withTimeInterval: 0.1, repeats: false) { _ in
-							navigateToBookView = true
-						}
+						Text("Books 📙")
+							.font(.largeTitle)
+							.foregroundColor(.black)
+							.fontWeight(.medium)
+							.padding()
+							.frame(width: 464, height: 101)
+							.background(Color.lightColor)
+							.clipShape(RoundedRectangle(cornerRadius: 19))
+							.padding()
+							.onTapGesture {
+								userSelection = CategoryType.books
+								
+								Timer.scheduledTimer(withTimeInterval: 0.1, repeats: false) { _ in
+									navigateToBookView = true
+								}
+							}
 					}
 				}
-			}
 				
 				VStack {
 					Spacer()
@@ -67,7 +69,7 @@ struct ContentView: View {
 							//TODO: Add Instructions/ Credits
 						} label: {
 							Image(systemName: "questionmark.circle.fill")
-								
+							
 						}
 						.padding()
 						.font(.largeTitle)
@@ -77,15 +79,17 @@ struct ContentView: View {
 						
 					}
 				}
-			
-			.padding()
-			.navigationTitle("Emoj-it")
-			
-			
+				
+				.padding()
+				.navigationTitle("Emoj-it")
+				.fullScreenCover(isPresented: $showOnboarding) {
+					OnboardingView(showOnboarding: $showOnboarding)
+					
+				}
+				
 			}
-			
 		}
 		
 		.navigationViewStyle(.stack)
-    }
+	}
 }
