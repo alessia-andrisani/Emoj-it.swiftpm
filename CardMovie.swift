@@ -34,7 +34,6 @@ struct CardMovie: View {
 					Image("Popover")
 					
 					Button {
-						//Dismiss
 						showingCard = false
 					} label: {
 						Image(systemName: "x.circle")
@@ -63,11 +62,12 @@ struct CardMovie: View {
 						.font(.title)
 						.padding(.bottom)
 						.multilineTextAlignment(.center)
+						.frame(alignment: .center)
 						
 					Text("Genre: \(movie.genre) ")
 						.font(.title2)
 						.padding(.vertical)
-					Text("Author: \(movie.director)")
+					Text("Director: \(movie.director)")
 						.font(.title2)
 						.padding(.vertical)
 					Text("Year: \(movie.date) ")
@@ -75,6 +75,7 @@ struct CardMovie: View {
 						.padding(.vertical)
 				}
 				.foregroundColor(.black)
+				
 				
 				Button {
 					//Next
@@ -125,6 +126,7 @@ struct CardMovie: View {
 			}
 			
 		}
+		.frame(width: 414 , height: 611)
 		.transition(.asymmetric(insertion: .scale, removal: .identity))
 		.onAppear {
 			levelStore.movies[movieIndex].isCompleted = true

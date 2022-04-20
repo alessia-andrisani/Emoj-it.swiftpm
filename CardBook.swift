@@ -59,10 +59,13 @@ struct CardBook: View {
 			VStack {
 				
 				VStack(alignment: .leading) {
+					
+					
 					Text("\(book.title)")
 						.font(.title)
 						.padding(.bottom)
 						.multilineTextAlignment(.center)
+						.frame(alignment: .center)
 					Text("Genre: \(book.genre) ")
 						.font(.title2)
 						.padding(.vertical)
@@ -121,6 +124,7 @@ struct CardBook: View {
 			}
 			
 		}
+		.frame(width: 414 , height: 611)
 		.transition(.asymmetric(insertion: .scale, removal: .identity))
 		.onAppear {
 			levelStore.books[bookIndex].isCompleted = true

@@ -55,7 +55,7 @@ let movie9 = Movie(id: UUID(), title: "The wolf of Wall Street", director: "Mart
 let movie10 = Movie(id: UUID(), title: """
  Fantastic Beasts
  and where to find them
-""", director: "David Yates", date: "2016", genre: "Fantasy", emojis: ["🤩","🦄","🐲","❓","🔎","🦄","🐲"], hint: "Spin-off of the Harry Potter series with magical creatures.")
+""", director: "David Yates", date: "2016", genre: "Fantasy", emojis: ["🤩","🦄","🐲","❓","🔎"], hint: "Spin-off of the Harry Potter series with magical creatures.")
 
 
 
