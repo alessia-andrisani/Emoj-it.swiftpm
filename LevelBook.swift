@@ -5,6 +5,7 @@
 //  Created by Alessia Andrisani on 14/04/22.
 //
 
+import AVFoundation
 import SwiftUI
 
 struct LevelBook: View {
@@ -32,6 +33,8 @@ struct LevelBook: View {
 		return bookIndex
 		
 	}
+	
+	@State var audioPlayer: AVAudioPlayer?
 	
 	
 	var body: some View {
@@ -132,7 +135,9 @@ struct LevelBook: View {
 				showingCard = true
 			}
 			userInput = ""
-			showingHint = false 
+			showingHint = false
+			startaudio()
+			
 		} else {
 			textFieldIsFocused = true
 			withAnimation {
@@ -146,6 +151,23 @@ struct LevelBook: View {
 				}
 			}
 		}
+	}
+	
+	func startaudio(){
+		let audioURL = Bundle.main.url(forResource: "Trumpet", withExtension: "mp3")
+		
+		guard audioURL != nil else {
+			print("No audio found")
+			return
+		}
+		do{
+			audioPlayer =  try AVAudioPlayer(contentsOf: audioURL!)
+			audioPlayer?.play()
+			
+		}catch{
+			print("errore \(error.localizedDescription)")
+		}
+		
 	}
 }
 

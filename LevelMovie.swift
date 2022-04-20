@@ -5,6 +5,7 @@
 //  Created by Alessia Andrisani on 16/04/22.
 //
 
+import AVFoundation
 import SwiftUI
 
 struct LevelMovie: View {
@@ -32,6 +33,8 @@ struct LevelMovie: View {
 		return movieIndex
 		
 	}
+	
+	@State var audioPlayer: AVAudioPlayer?
 	
 	var body: some View {
 		ZStack {
@@ -132,7 +135,8 @@ struct LevelMovie: View {
 				showingCard = true
 			}
 			userInput = ""
-			showingHint = false 
+			showingHint = false
+			startaudio()
 		} else {
 			
 			textFieldIsFocused = true
@@ -147,6 +151,22 @@ struct LevelMovie: View {
 				}
 			}
 		}
+	}
+	func startaudio(){
+		let audioURL = Bundle.main.url(forResource: "Trumpet", withExtension: "mp3")
+		
+		guard audioURL != nil else {
+			print("No audio found")
+			return
+		}
+		do{
+			audioPlayer =  try AVAudioPlayer(contentsOf: audioURL!)
+			audioPlayer?.play()
+			
+		}catch{
+			print("errore \(error.localizedDescription)")
+		}
+		
 	}
 	
 }
