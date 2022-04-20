@@ -17,6 +17,8 @@ struct CardMovie: View {
 	
 	var movie: Movie
 	
+	let impact = UIImpactFeedbackGenerator(style: .medium)
+	
 	var movieIndex: Int {
 		let movieIndex = levelStore.movies.firstIndex(where:  {$0.id == movie.id } )!
 		return movieIndex
@@ -86,7 +88,10 @@ struct CardMovie: View {
 						dismiss()
 						
 					}
+					
 					showingCard = false
+					
+					impact.impactOccurred()
 				} label: {
 					ZStack {
 						RoundedRectangle(cornerRadius: 8)

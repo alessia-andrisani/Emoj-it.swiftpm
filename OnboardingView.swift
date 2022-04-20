@@ -11,6 +11,8 @@ struct OnboardingView: View {
 	
 	@Binding var showOnboarding: Bool
 	
+	let impact = UIImpactFeedbackGenerator(style: .medium)
+	
 	var body: some View {
 		
 		ZStack {
@@ -50,6 +52,7 @@ struct OnboardingView: View {
 				
 				Button {
 					showOnboarding = false
+					impact.impactOccurred()
 				} label: {
 					Text("Let's start!")
 						

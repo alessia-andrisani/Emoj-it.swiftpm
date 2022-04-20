@@ -25,6 +25,8 @@ struct LevelMovie: View {
 	
 	@State private var shakeAnimation = false
 	
+	let impact = UIImpactFeedbackGenerator(style: .medium)
+	
 	var movieIndex: Int {
 		let movieIndex = levelStore.movies.firstIndex(where:  {$0.id == movie.id } )!
 		return movieIndex
@@ -85,6 +87,7 @@ struct LevelMovie: View {
 			ToolbarItem(placement: .navigationBarTrailing){
 				Button {
 					showingHelp = true
+					impact.impactOccurred()
 				} label: {
 					Text("💡")
 						.font(.largeTitle)

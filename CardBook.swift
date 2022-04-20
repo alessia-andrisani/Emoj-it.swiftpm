@@ -17,6 +17,8 @@ struct CardBook: View {
 	
 	var book: Book
 	
+	let impact = UIImpactFeedbackGenerator(style: .medium)
+	
 	var bookIndex: Int {
 		let bookIndex = levelStore.books.firstIndex(where:  {$0.id == book.id } )!
 		return bookIndex
@@ -85,6 +87,7 @@ struct CardBook: View {
 						dismiss()
 					}
 					showingCard = false
+					impact.impactOccurred()
 				} label: {
 					ZStack {
 						RoundedRectangle(cornerRadius: 8)

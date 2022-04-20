@@ -11,6 +11,7 @@ struct ContentView: View {
 	//	@AppStorage("showOnboarding") private var showOnboarding = true
 	@State private var showOnboarding = true
 	
+	let impact = UIImpactFeedbackGenerator(style: .medium)
 	
 	var body: some View {
 		NavigationView {
@@ -33,6 +34,8 @@ struct ContentView: View {
 							.onTapGesture {
 								userSelection = CategoryType.movies
 								
+								impact.impactOccurred()
+								
 								Timer.scheduledTimer(withTimeInterval: 0.1, repeats: false) { _ in
 									navigateToMovieView = true
 								}
@@ -54,6 +57,8 @@ struct ContentView: View {
 							.onTapGesture {
 								userSelection = CategoryType.books
 								
+								impact.impactOccurred()
+								
 								Timer.scheduledTimer(withTimeInterval: 0.1, repeats: false) { _ in
 									navigateToBookView = true
 								}
@@ -66,10 +71,13 @@ struct ContentView: View {
 					HStack {
 						Spacer()
 						Button {
-							//TODO: Add Instructions/ Credits
+							showOnboarding = true
+							
+							impact.impactOccurred()
+							
 						} label: {
 							Image(systemName: "questionmark.circle.fill")
-							
+//							Text("💡")
 						}
 						.padding()
 						.font(.largeTitle)

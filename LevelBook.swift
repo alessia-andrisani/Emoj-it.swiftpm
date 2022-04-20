@@ -25,6 +25,8 @@ struct LevelBook: View {
 	
 	@State private var shakeAnimation = false
 	
+	let impact = UIImpactFeedbackGenerator(style: .medium)
+	
 	var bookIndex: Int {
 		let bookIndex = levelStore.books.firstIndex(where:  {$0.id == book.id } )!
 		return bookIndex
@@ -85,6 +87,7 @@ struct LevelBook: View {
 			ToolbarItem(placement: .navigationBarTrailing){
 				Button {
 					showingHelp = true
+					impact.impactOccurred()
 				} label: {
 					Text("💡")
 						.font(.largeTitle)
