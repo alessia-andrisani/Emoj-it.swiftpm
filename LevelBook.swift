@@ -155,9 +155,10 @@ struct LevelBook: View {
 			startaudio()
 			
 		} else {
+			
 			textFieldIsFocused = true
+			
 			withAnimation {
-				
 				
 				shakeAnimation = true
 				

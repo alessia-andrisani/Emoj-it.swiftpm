@@ -123,7 +123,7 @@ struct LevelMovie: View {
 						
 						Divider()
 
-
+						
 						Text("See the solution")
 							.font(.title3)
 							.onTapGesture {
@@ -133,13 +133,11 @@ struct LevelMovie: View {
 								
 								
 							}
-
 					}
 					.padding()
 				}
 			}
 		}
-		
 	}
 	func checkAnswer() {
 		if userInput.normalized() == movie.title.normalized() {
@@ -154,7 +152,6 @@ struct LevelMovie: View {
 			
 			textFieldIsFocused = true
 			withAnimation {
-				
 				
 				shakeAnimation = true
 				
