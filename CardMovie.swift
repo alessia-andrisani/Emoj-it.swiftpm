@@ -127,7 +127,7 @@ struct CardMovie: View {
 			
 		}
 		.frame(width: 414 , height: 611)
-		.transition(.asymmetric(insertion: .scale, removal: .identity))
+		.transition(.scale)
 		.onAppear {
 			levelStore.movies[movieIndex].isCompleted = true
 		}

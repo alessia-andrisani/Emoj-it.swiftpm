@@ -34,8 +34,9 @@ struct CardBook: View {
 					Image("Popover")
 					
 					Button {
-						//Dismiss
+						
 						showingCard = false
+						
 					} label: {
 						Image(systemName: "x.circle")
 							.foregroundColor(.black)
@@ -105,6 +106,7 @@ struct CardBook: View {
 					
 				}
 				.offset(y: 65)
+				
 				if !isGameOver() {
 					Button {
 						
@@ -124,8 +126,10 @@ struct CardBook: View {
 			}
 			
 		}
+		
 		.frame(width: 414 , height: 611)
-		.transition(.asymmetric(insertion: .scale, removal: .identity))
+		.transition(.scale)
+//		.transition(.asymmetric(insertion: .scale, removal: .identity))
 		.onAppear {
 			levelStore.books[bookIndex].isCompleted = true
 		}
