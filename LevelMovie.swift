@@ -65,6 +65,19 @@ struct LevelMovie: View {
 			.font(.title2)
 			.fontWeight(.medium)
 			
+			Button {
+				checkAnswer()
+				impact.impactOccurred()
+			} label: {
+				Text("Done")
+					
+			}
+			.padding()
+			.font(.title)
+			.foregroundColor(.white)
+			.background(Color("DarkColor"))
+			.clipShape(RoundedRectangle(cornerRadius: 19))
+			
 			if showingHint {
 			Text("Hint: \(movie.hint)")
 				.font(.title2)
@@ -74,6 +87,8 @@ struct LevelMovie: View {
 			Spacer()
 				
 		}
+		.ignoresSafeArea(.keyboard)
+			
 			if showingCard {
 				Color.black.opacity(0.6).ignoresSafeArea()
 				
@@ -102,10 +117,8 @@ struct LevelMovie: View {
 						Text("Get a hint")
 							.font(.title3)
 							.onTapGesture {
-								
 								showingHint = true
-								
-								
+								showingHelp = false
 							}
 						
 						Divider()
@@ -117,7 +130,7 @@ struct LevelMovie: View {
 								
 								userInput = movie.title
 								showingHelp = false
-								textFieldIsFocused = true 
+								
 								
 							}
 

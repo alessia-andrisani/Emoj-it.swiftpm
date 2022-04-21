@@ -39,6 +39,7 @@ struct LevelBook: View {
 	
 	var body: some View {
 		ZStack {
+			
 		VStack(spacing: 30) {
 			Spacer()
 			Text("Can you guess the book title?")
@@ -66,6 +67,20 @@ struct LevelBook: View {
 				.font(.title2)
 				.fontWeight(.medium)
 			
+			
+			Button {
+				checkAnswer()
+				impact.impactOccurred()
+			} label: {
+				Text("Done")
+					
+			}
+			.padding()
+			.font(.title)
+			.foregroundColor(.white)
+			.background(Color("DarkColor"))
+			.clipShape(RoundedRectangle(cornerRadius: 19))
+			
 			if showingHint {
 			Text("Hint: \(book.hint)")
 				.font(.title2)
@@ -75,6 +90,7 @@ struct LevelBook: View {
 			Spacer()
 				
 		}
+		.ignoresSafeArea(.keyboard)
 			if showingCard {
 				Color.black.opacity(0.6).ignoresSafeArea()
 					
@@ -83,6 +99,7 @@ struct LevelBook: View {
 				}
 			}
 	}
+		
 		.navigationTitle(book.isForKids ? "Children - Level \(bookIndex + 1)" : "Level \(bookIndex + 1)")
 		.navigationBarTitleDisplayMode(.inline)
 		
@@ -102,9 +119,8 @@ struct LevelBook: View {
 						Text("Get a hint")
 							.font(.title3)
 							.onTapGesture {
-								
 								showingHint = true
-								
+								showingHelp = false
 							}
 						
 						Divider()
@@ -116,7 +132,7 @@ struct LevelBook: View {
 							
 								userInput = book.title
 								showingHelp = false
-								textFieldIsFocused = true
+								
 								
 							}
 
