@@ -36,8 +36,8 @@ let book3 = Book(id: UUID(), title: "The Old Man and the Sea", author: "Ernest H
 let book4 = Book(id: UUID(), title: "To Kill a Mockingbird", author: "Harper Lee", date: "1960", genre: "Novel", emojis: ["☠️🦜"], hint: "The story is told through the eyes of the six-year-old Scout, daughter of the lawyer Atticus Finch.")
 let book5 = Book(id: UUID(), title: "The Secret Garden", author: "Frances Hodgson Burnett", date: "1911", genre: "Novel", emojis: ["🤫","🌻","🌷","🌲"], hint: "The 10-year-old girl Mary Lennox is the protagonist of this novel, considered a classic for children.")
 let book6 = Book(id: UUID(), title: """
- Harry Potter
- and the deathly Hallows
+Harry Potter
+and the deathly Hallows
 """, author: "J.K. Rowling", date: "2007", genre: "Fantasy", emojis: ["👦","⚡️","☠️","🎁","🎁"], hint: "The last book about the most famous wizard with rounded glasses.")
 
 let book7 = Book(id: UUID(), title: "Angels and Demons", author: "Dan Brown", date: "2000", genre: "Thriller", emojis: ["👼","👼","😈","😈"], hint: "This novel by Dan Brown introduces for the first time the character Robert Langdon, expert of symbology.")
@@ -59,8 +59,8 @@ let book11 = Book(id: UUID(), title: "The Jungle Book", author: "Rudyard Kipling
 let book12 = Book(id: UUID(), title: "Never ending story", author: "Michael Ende", date: "1979", genre: "Fantasy", isForKids: true, emojis: ["∞","📖"], hint: "The young Bastian finds a book set in the magical land of Fantastica.")
 let book13 = Book(id: UUID(), title: "The Sword in the stone", author: "T.H. White", date: "1938", genre: "Fantasy", isForKids: true, emojis: ["🗡","⤵️","🪨"], hint: "The young Wart meets the wizard Merlyn who starts training him to become king.")
 let book14 = Book(id: UUID(), title: """
- Harry Potter
- and the chamber of Secrets
+Harry Potter
+and the chamber of Secrets
 """, author: "J.K. Rowling", date: "1998", genre: "Fantasy", isForKids: true, emojis: ["👦","⚡️","🛌","🤫"], hint: "The house-elf Dobby tries to stop Harry from going back to Hogwarts for his second year of school. ")
 let book15 = Book(id: UUID(), title: "The little prince", author: "Antoine de Saint-Exupéry", date: "1943", genre: "Novel", isForKids: true, emojis: ["👦","👑"], hint: "The young protagonist has golden hair and when he meets an aviator in the Sahara, starts asking him questions.")
 let book16 = Book(id: UUID(), title: "Charlie and the chocolate factory", author: "Roald Dahl", date: "1964", genre: "Novel", isForKids: true, emojis: ["👦","🍫","🏭"], hint: "Charlie finds one of the golden tickets and visits Willy Wonka’s factory.")

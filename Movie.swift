@@ -46,15 +46,15 @@ let movie7 = Movie(id: UUID(), title: "Once upon a time in the West", director: 
 
 
 let movie8 = Movie(id: UUID(), title: """
- Harry Potter
- and the Goblet of Fire
+Harry Potter
+and the Goblet of Fire
 """, director: "Mike Newell", date: "2005", genre: "Fantasy", emojis: ["👦","⚡️","🍷","🔥"], hint: "Harry Potter is now in his 4th year at Hogwarts and is chosen as Triwizard Champion. ")
 
 let movie9 = Movie(id: UUID(), title: "The wolf of Wall Street", director: "Martin Scorsese", date: "2013", genre: "Biography, Dramatic, Comedy", emojis: ["🐺","🧱","🛣","💰"], hint: "Leonardo DiCaprio is the protagonist and plays an unscrupulous broker of New York.")
 
 let movie10 = Movie(id: UUID(), title: """
- Fantastic Beasts
- and where to find them
+Fantastic Beasts
+and where to find them
 """, director: "David Yates", date: "2016", genre: "Fantasy", emojis: ["🤩","🦄","🐲","❓","🔎"], hint: "Spin-off of the Harry Potter series with magical creatures.")
 
 
