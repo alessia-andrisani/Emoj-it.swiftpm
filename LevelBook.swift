@@ -154,6 +154,8 @@ struct LevelBook: View {
 			showingHint = false
 			startaudio()
 			
+			
+			
 		} else {
 			
 			textFieldIsFocused = true

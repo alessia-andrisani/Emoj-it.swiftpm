@@ -132,6 +132,8 @@ struct CardBook: View {
 //		.transition(.asymmetric(insertion: .scale, removal: .identity))
 		.onAppear {
 			levelStore.books[bookIndex].isCompleted = true
+			
+			levelStore.saveBooks()
 		}
 		
 	}

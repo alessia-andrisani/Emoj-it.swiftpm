@@ -8,8 +8,9 @@ struct ContentView: View {
 	
 	@State private var navigateToBookView = false
 	
-	//	@AppStorage("showOnboarding") private var showOnboarding = true
-	@State private var showOnboarding = true
+	@AppStorage("showOnboarding") private var showOnboarding = true
+	
+//	@State private var showOnboarding = true
 	
 	let impact = UIImpactFeedbackGenerator(style: .medium)
 	

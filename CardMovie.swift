@@ -130,6 +130,7 @@ struct CardMovie: View {
 		.transition(.scale)
 		.onAppear {
 			levelStore.movies[movieIndex].isCompleted = true
+			levelStore.saveMovies()
 		}
 		
 	}
