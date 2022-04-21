@@ -83,7 +83,7 @@ struct LevelBook: View {
 				}
 			}
 	}
-		.navigationTitle(book.isForKids ? "Kids - Level \(bookIndex + 1)" : "Level \(bookIndex + 1)")
+		.navigationTitle(book.isForKids ? "Children - Level \(bookIndex + 1)" : "Level \(bookIndex + 1)")
 		.navigationBarTitleDisplayMode(.inline)
 		
 		.toolbar {

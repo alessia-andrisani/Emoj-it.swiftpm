@@ -22,7 +22,7 @@ struct KidsSection: View {
 	var icon: String
 	var body: some View {
 		VStack(alignment: .leading) {
-			Header("For Kids")
+			Header(userSelection == .movies ? "Children's movies" : "Children's books")
 				.padding(.leading, 30)
 			
 			LazyVGrid(columns: columns, spacing: 50) {

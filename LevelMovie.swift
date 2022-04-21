@@ -83,7 +83,7 @@ struct LevelMovie: View {
 	
 			}
 	}
-		.navigationTitle(movie.isForKids ? "Kids - Level \(movieIndex + 1)" : "Level \(movieIndex + 1)")
+		.navigationTitle(movie.isForKids ? "Children - Level \(movieIndex + 1)" : "Level \(movieIndex + 1)")
 		.navigationBarTitleDisplayMode(.inline)
 		
 		.toolbar {
