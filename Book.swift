@@ -46,7 +46,7 @@ let book8 = Book(id: UUID(), title: "Wuthering Heights", author: "Emily Brontë"
 
 let book9 = Book(id: UUID(), title: "Animal Farm", author: "George Orwell", date: "1945", genre: "Political Satire", emojis: ["🐷","🐶","🐓","🚜","👨‍🌾"], hint: "A group of  farm animals rebel against their human farmer to create a new society.")
 
-let book10 = Book(id: UUID(), title: "A Thousands Splendid Suns", author: "Khaled Hosseini", date: "2007", genre: "Novel", emojis: ["∞","🤩","☀️","☀️"], hint: "Mariam, the protagonist, lives on the outskirts of Herat with her mother.")
+let book10 = Book(id: UUID(), title: "A Thousand Splendid Suns", author: "Khaled Hosseini", date: "2007", genre: "Novel", emojis: ["∞","🤩","☀️","☀️"], hint: "Mariam, the protagonist, lives on the outskirts of Herat with her mother.")
 
 
 
