@@ -30,7 +30,7 @@ struct Movie: Identifiable, Codable {
 
 let movie1 = Movie(id: UUID(), title: "Infinity War", director: "Anthony and Joe Russo", date: "2018", genre: "Action, Sci-Fi", emojis: ["∞","⚔️"], hint: "The Avengers have to fight against the titan Thanos.")
 
-let movie2 = Movie(id: UUID(), title: "The dark knight", director: "Christopher Nolan", date: "2008", genre: "Action, Thriller", emojis: ["⚫️","🏇"], hint: "It is about a famous comics hero with a double identity and a faithful butler.")
+let movie2 = Movie(id: UUID(), title: "The dark knight", director: "Christopher Nolan", date: "2008", genre: "Action, Thriller", emojis: ["⚫️","🧍‍♂️","⬆️","🐎"], hint: "It is about a famous comics hero with a double identity and a faithful butler.")
 
 
 let movie3 = Movie(id: UUID(), title: "The Golden Compass", director: "Chris Weitz", date: "2007", genre: "Fantasy", emojis: ["🥇","🧭"], hint: "12-year-old Lyra Belacqua lives in Oxford with her daemon Pan.")
@@ -79,14 +79,16 @@ let movie13 = Movie(id: UUID(), title: "Toy Story", director: "John Lasseter", d
 
 let movie14 = Movie(id: UUID(), title: "Finding Nemo", director: "Andrew Stanton, Lee Unkrich", date: "2003", genre: "Animated Film", isForKids: true, emojis: ["🔎","🐟"], hint: "Marlin goes on a journey in the sea to find his son.")
 
-let movie15 = Movie(id: UUID(), title: "Kung Fu Panda", director: "John Stevenson, Mark Osborne", date: "2008", genre: "Animated Film", isForKids: true, emojis: ["🥋","🐼"], hint: "Po the panda learns martial arts.")
+let movie15 = Movie(id: UUID(), title: "Turning Red", director: "Domee Shi", date: "2022", genre: "Animated Film", isForKids: true, emojis: ["🔃","🔴"], hint: "The young Mei Lee discovers her power to transform into a large red panda.")
 
-let movie16 = Movie(id: UUID(), title: "Pirates of The Caribbean", director: "Gore Verbinski", date: "2003", genre: "Fantasy, Adventure", isForKids: true, emojis: ["🏴‍☠️","🏴‍☠️","🏝"], hint: "The pirate Jack Sparrow and his crew navigate the seas on the Black Pearl.")
+let movie16 = Movie(id: UUID(), title: "Kung Fu Panda", director: "John Stevenson, Mark Osborne", date: "2008", genre: "Animated Film", isForKids: true, emojis: ["🥋","🐼"], hint: "Po the panda learns martial arts.")
 
-let movie17 = Movie(id: UUID(), title: "Sleeping Beauty", director: "Clyde Geronimi, Eric Larson", date: "1959", genre: "Animated Film", isForKids: true, emojis: ["💤","👸"], hint: "The princess Aurora falls asleep because of a spell cast by the cruel Maleficent.")
+let movie17 = Movie(id: UUID(), title: "Pirates of The Caribbean", director: "Gore Verbinski", date: "2003", genre: "Fantasy, Adventure", isForKids: true, emojis: ["🏴‍☠️","🏴‍☠️","🏝"], hint: "The pirate Jack Sparrow and his crew navigate the seas on the Black Pearl.")
 
-let movie18 = Movie(id: UUID(), title: "How to train your dragon", director: "Dean DeBlois", date: "2010", genre: "Animated Film", isForKids: true, emojis: ["❓","🏋️‍♀️","🐉"], hint: "A young Viking, Hiccup, becomes friend of a dragon.")
+let movie18 = Movie(id: UUID(), title: "Sleeping Beauty", director: "Clyde Geronimi, Eric Larson", date: "1959", genre: "Animated Film", isForKids: true, emojis: ["💤","👸"], hint: "The princess Aurora falls asleep because of a spell cast by the cruel Maleficent.")
 
-let movie19 = Movie(id: UUID(), title: "The Nightmare before Christmas", director: "Henry Selick", date: "1993", genre: "Animated Film", isForKids: true, emojis: ["👹","💤","⬅️","🎄","🎅"], hint: "The protagonist is Jack Skellington, the “Pumpkin King” who lives in Halloween Town.")
+let movie19 = Movie(id: UUID(), title: "How to train your dragon", director: "Dean DeBlois", date: "2010", genre: "Animated Film", isForKids: true, emojis: ["❓","🏋️‍♀️","🐉"], hint: "A young Viking, Hiccup, becomes friend of a dragon.")
 
-let movie20 = Movie(id: UUID(), title: "Turning Red", director: "Domee Shi", date: "2022", genre: "Animated Film", isForKids: true, emojis: ["🔃","🔴"], hint: "The young Mei Lee discovers her power to transform into a large red panda.")
+let movie20 = Movie(id: UUID(), title: "The Nightmare before Christmas", director: "Henry Selick", date: "1993", genre: "Animated Film", isForKids: true, emojis: ["👹","💤","⬅️","🎄","🎅"], hint: "The protagonist is Jack Skellington, the “Pumpkin King” who lives in Halloween Town.")
+
+
