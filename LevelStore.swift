@@ -24,17 +24,26 @@ class LevelStore: ObservableObject {
 		do {
 			let bookData = try Data(contentsOf: savePath)
 			
-			let movieData = try Data(contentsOf: savePath2)
-			
 			books = try JSONDecoder().decode([Book].self, from: bookData)
 			
-			movies = try JSONDecoder().decode([Movie].self, from: movieData)
 		} catch {
 			books = books
+		}
+		
+		do {
+			let movieData = try Data(contentsOf: savePath2)
+			
+			movies = try JSONDecoder().decode([Movie].self, from: movieData)
+			
+		} catch {
 			movies = movies
 		}
+		
 	}
-
+	
+	
+	
+	
 	// Save data to Disk
 	func saveBooks() {
 		do {
