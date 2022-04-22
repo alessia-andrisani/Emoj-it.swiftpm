@@ -35,14 +35,13 @@ let movie2 = Movie(id: UUID(), title: "The Dark Knight", director: "Christopher 
 
 let movie3 = Movie(id: UUID(), title: "The Golden Compass", director: "Chris Weitz", date: "2007", genre: "Fantasy", emojis: ["🥇","🧭"], hint: "12-year-old Lyra Belacqua lives in Oxford with her daemon Pan.")
 
-let movie4 = Movie(id: UUID(), title: "Star Wars", director: "George Lucas", date: "1977", genre: "Fantasy, Sci-Fi", emojis: ["🌟","⚔️","⚔️"], hint: "It is a famous saga made up of 9 episodes.")
+let movie4 = Movie(id: UUID(), title: "Taxi Driver", director: "Martin Scorsese", date: "1976", genre: "Thriller, Dramatic", emojis: ["🚕","👨‍✈️"], hint: "A Vietnam War veteran suffering from post-traumatic stress disorder takes a job as a night shift taxi driver.")
 
-let movie5 = Movie(id: UUID(), title: "Back to the Future", director: "Robert Zemeckis", date: "1985", genre: "Sci-Fi, Adventure", emojis: ["🔙","🔮"], hint: "The main character is Marty McFly played by Michael J. Fox.")
+let movie5 = Movie(id: UUID(), title: "Star Wars", director: "George Lucas", date: "1977", genre: "Fantasy, Sci-Fi", emojis: ["🌟","⚔️","⚔️"], hint: "It is a famous saga made up of 9 episodes.")
 
-let movie6 = Movie(id: UUID(), title: "Singing in the rain", director: "Stanley Donen, Gene Kelly", date: "1952", genre: "Musical", emojis: ["🎤","🎶","⤵️","☔️"], hint: "Famous musical of the 50’s with Gene Kelly and Donald O’Connor.")
+let movie6 = Movie(id: UUID(), title: "Back to the Future", director: "Robert Zemeckis", date: "1985", genre: "Sci-Fi, Adventure", emojis: ["🔙","🔮"], hint: "The main character is Marty McFly played by Michael J. Fox.")
 
-let movie7 = Movie(id: UUID(), title: "Once upon a time in the West", director: "Sergio Leone", date: "1968", genre: "Western", emojis: ["1️⃣","🕛","⤵️","🤠"], hint: "Italian western movie considered among the best ones ever made.")
-
+let movie7 = Movie(id: UUID(), title: "Singing in the rain", director: "Stanley Donen, Gene Kelly", date: "1952", genre: "Musical", emojis: ["🎤","🎶","⤵️","☔️"], hint: "Famous musical of the 50’s with Gene Kelly and Donald O’Connor.")
 
 
 let movie8 = Movie(id: UUID(), title: """
@@ -59,7 +58,7 @@ and where to find them
 
 
 
-
+//let movie7 = Movie(id: UUID(), title: "Once upon a time in the West", director: "Sergio Leone", date: "1968", genre: "Western", emojis: ["1️⃣","🕛","⤵️","🤠"], hint: "Italian western movie considered among the best ones ever made.")
 
 
 //let movie10 = Movie(id: UUID(), title: """
