@@ -108,7 +108,7 @@ struct LevelMovie: View {
 					impact.impactOccurred()
 				} label: {
 					Text("💡")
-						.font(.largeTitle)
+						.font(.system(size: 50))
 				}
 				.popover(isPresented: $showingHelp) {
 					
