@@ -17,6 +17,8 @@ extension String {
 		
 		string = string.replacingOccurrences(of: " ", with: "")
 		
+		string = string.replacingOccurrences(of: "\n", with: "")
+		
 		string = string.folding(options: .diacriticInsensitive, locale: .current)
 		
 		return string 
