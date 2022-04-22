@@ -147,10 +147,12 @@ struct LevelMovie: View {
 			}
 			userInput = ""
 			showingHint = false
-			startaudio()
+			textFieldIsFocused = false 
+			audioCorrect()
 		} else {
 			
 			textFieldIsFocused = true
+			audioWrong()
 			withAnimation {
 				
 				shakeAnimation = true
@@ -162,8 +164,25 @@ struct LevelMovie: View {
 			}
 		}
 	}
-	func startaudio(){
-		let audioURL = Bundle.main.url(forResource: "Trumpet", withExtension: "mp3")
+	func audioCorrect(){
+		let audioURL = Bundle.main.url(forResource: "correctSound", withExtension: "mp3")
+		
+		guard audioURL != nil else {
+			print("No audio found")
+			return
+		}
+		do{
+			audioPlayer =  try AVAudioPlayer(contentsOf: audioURL!)
+			audioPlayer?.play()
+			
+		}catch{
+			print("errore \(error.localizedDescription)")
+		}
+		
+	}
+	
+	func audioWrong(){
+		let audioURL = Bundle.main.url(forResource: "wrongSound", withExtension: "mp3")
 		
 		guard audioURL != nil else {
 			print("No audio found")
