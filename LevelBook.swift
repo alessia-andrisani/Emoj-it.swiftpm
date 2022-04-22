@@ -121,6 +121,7 @@ struct LevelBook: View {
 							.onTapGesture {
 								showingHint = true
 								showingHelp = false
+								textFieldIsFocused = false
 							}
 						
 						Divider()
@@ -132,6 +133,7 @@ struct LevelBook: View {
 							
 								userInput = book.title
 								showingHelp = false
+								textFieldIsFocused = false 
 								
 								
 							}

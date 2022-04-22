@@ -119,6 +119,7 @@ struct LevelMovie: View {
 							.onTapGesture {
 								showingHint = true
 								showingHelp = false
+								textFieldIsFocused = false 
 							}
 						
 						Divider()
@@ -130,6 +131,7 @@ struct LevelMovie: View {
 								
 								userInput = movie.title
 								showingHelp = false
+								textFieldIsFocused = false 
 								
 								
 							}
