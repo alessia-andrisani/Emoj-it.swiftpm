@@ -30,7 +30,7 @@ struct Movie: Identifiable, Codable {
 
 let movie1 = Movie(id: UUID(), title: "Infinity War", director: "Anthony and Joe Russo", date: "2018", genre: "Action, Sci-Fi", emojis: ["∞","⚔️"], hint: "The Avengers have to fight against the titan Thanos.")
 
-let movie2 = Movie(id: UUID(), title: "The Dark Knight", director: "Christopher Nolan", date: "2008", genre: "Action, Thriller", emojis: ["⚫️","🧍‍♂️","⬆️","🐎"], hint: "It is about a famous comics hero with a double identity and a faithful butler.")
+let movie2 = Movie(id: UUID(), title: "The Dark Knight", director: "Christopher Nolan", date: "2008", genre: "Action, Thriller", emojis: ["⚫️","♞"], hint: "It is about a famous comics hero with a double identity and a faithful butler.")
 
 
 let movie3 = Movie(id: UUID(), title: "The Golden Compass", director: "Chris Weitz", date: "2007", genre: "Fantasy", emojis: ["🥇","🧭"], hint: "12-year-old Lyra Belacqua lives in Oxford with her daemon Pan.")

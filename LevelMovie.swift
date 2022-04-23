@@ -82,6 +82,7 @@ struct LevelMovie: View {
 			Text("Hint: \(movie.hint)")
 				.font(.title2)
 				.lineLimit(nil)
+				.padding(.horizontal)
 			}
 			Spacer()
 			Spacer()

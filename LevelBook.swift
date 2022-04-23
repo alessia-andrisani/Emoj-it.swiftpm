@@ -85,6 +85,7 @@ struct LevelBook: View {
 			Text("Hint: \(book.hint)")
 				.font(.title2)
 				.lineLimit(nil)
+				.padding(.horizontal)
 			}
 			Spacer()
 			Spacer()
