@@ -21,7 +21,7 @@ struct OnboardingView: View {
 			
 			RoundedRectangle(cornerRadius: 23)
 				.frame(width: UIScreen.main.bounds.width * 0.8, height: UIScreen.main.bounds.height * 0.8)
-				.foregroundColor(.white)
+				.foregroundColor(Color(uiColor: .secondarySystemBackground))
 			
 			
 			VStack(alignment: .center, spacing: 50) {
@@ -64,7 +64,7 @@ struct OnboardingView: View {
 				.clipShape(RoundedRectangle(cornerRadius: 19))
 				
 			}
-			.foregroundColor(.black)
+			.foregroundColor(.primary)
 			.frame(width: UIScreen.main.bounds.width * 1 / 1.9, alignment: .leading)
 			.padding(.bottom)
 		}
