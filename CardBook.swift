@@ -124,7 +124,6 @@ struct CardBook: View {
 					.offset(y: 85)
 				}
 			}
-			
 		}
 		
 		.frame(width: 414 , height: 611)

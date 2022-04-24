@@ -10,17 +10,13 @@ struct ContentView: View {
 	
 	@AppStorage("showOnboarding") private var showOnboarding = true
 	
-//	@State private var showOnboarding = true
-	
 	let impact = UIImpactFeedbackGenerator(style: .medium)
 	
 	var body: some View {
 		NavigationView {
 			ZStack {
-				
 				VStack {
-					
-					
+
 					NavigationLink(isActive: $navigateToMovieView) {  LevelsGridView(userSelection: $userSelection) } label: {
 						
 						Text("Movies 🎬")
@@ -41,7 +37,6 @@ struct ContentView: View {
 									navigateToMovieView = true
 								}
 							}
-						
 					}
 					
 					NavigationLink(isActive: $navigateToBookView) { LevelsGridView(userSelection: $userSelection) } label: {
@@ -78,7 +73,7 @@ struct ContentView: View {
 							
 						} label: {
 							Image(systemName: "questionmark.circle.fill")
-//							Text("💡")
+
 						}
 						.padding()
 						.font(.largeTitle)
@@ -95,7 +90,6 @@ struct ContentView: View {
 					OnboardingView(showOnboarding: $showOnboarding)
 					
 				}
-				
 			}
 		}
 		

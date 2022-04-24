@@ -68,6 +68,5 @@ struct OnboardingView: View {
 			.frame(width: UIScreen.main.bounds.width * 1 / 1.9, alignment: .leading)
 			.padding(.bottom)
 		}
-		
 	}
 }

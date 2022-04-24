@@ -104,7 +104,6 @@ struct CardMovie: View {
 							.foregroundColor(.white)
 							.font(.largeTitle)
 					}
-					
 				}
 				.offset(y: 65)
 				
@@ -124,7 +123,6 @@ struct CardMovie: View {
 				.offset(y: 85)
 				}
 			}
-			
 		}
 		.frame(width: 414 , height: 611)
 		.transition(.scale)

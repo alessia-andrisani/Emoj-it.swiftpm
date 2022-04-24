@@ -31,8 +31,7 @@ struct MovieItem: View {
 	var body: some View {
 		
 		NavigationLink { LevelMovie(movie: movie) } label: {
-			
-			
+
 			VStack(spacing: 0) {
 				
 				HStack {

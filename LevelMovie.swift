@@ -196,9 +196,7 @@ struct LevelMovie: View {
 			audioPlayer?.play()
 			
 		}catch{
-			print("errore \(error.localizedDescription)")
+			print("error \(error.localizedDescription)")
 		}
-		
 	}
-	
 }

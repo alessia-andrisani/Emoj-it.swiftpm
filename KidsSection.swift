@@ -9,8 +9,6 @@ import SwiftUI
 
 struct KidsSection: View {
 	
-
-	
 	@EnvironmentObject var levelStore: LevelStore
 	
 	@Binding var userSelection: CategoryType
@@ -34,7 +32,6 @@ struct KidsSection: View {
 					ForEach (levelStore.movies.filter({$0.isForKids == true }), id: \.id) { movie in
 						MovieItem(color: .darkColor, movie: movie)
 					}
-					
 				}
 			}
 			.padding()

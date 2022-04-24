@@ -16,7 +16,6 @@ struct BookItem: View {
 	
 	@EnvironmentObject var levelStore: LevelStore
 	
-	
 	var icon: String = "📙"
 	var color: Color
 	
@@ -31,8 +30,7 @@ struct BookItem: View {
 	var body: some View {
 		
 		NavigationLink { LevelBook(book: book) } label: {
-			
-			
+
 			VStack(spacing: 0) {
 				
 				HStack {

@@ -38,7 +38,6 @@ class LevelStore: ObservableObject {
 		} catch {
 			movies = movies
 		}
-		
 	}
 	
 	

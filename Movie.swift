@@ -57,10 +57,6 @@ and where to find them
 """, director: "David Yates", date: "2016", genre: "Fantasy", emojis: ["🤩","🦄","🐲","❓","🔎"], hint: "Spin-off of the Harry Potter series with magical creatures.")
 
 
-
-//let movie7 = Movie(id: UUID(), title: "Once upon a time in the West", director: "Sergio Leone", date: "1968", genre: "Western", emojis: ["1️⃣","🕛","⤵️","🤠"], hint: "Italian western movie considered among the best ones ever made.")
-
-
 //let movie10 = Movie(id: UUID(), title: """
 // Indiana Jones and the Kingdom
 // of the Crystal Skull

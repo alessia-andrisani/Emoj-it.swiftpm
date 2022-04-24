@@ -144,7 +144,6 @@ struct LevelBook: View {
 				}
 			}
 		}
-		
 	}
 	
 	func checkAnswer() {
@@ -208,9 +207,8 @@ struct LevelBook: View {
 			audioPlayer?.play()
 			
 		}catch{
-			print("errore \(error.localizedDescription)")
+			print("error \(error.localizedDescription)")
 		}
-		
 	}
 }
 

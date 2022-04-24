@@ -11,7 +11,5 @@ import SwiftUI
 extension Color {
 	static let lightColor = Color("LightColor")
 	
-	static let middleColor = Color("MiddleColor")
-	
 	static let darkColor = Color("DarkColor")
 }
