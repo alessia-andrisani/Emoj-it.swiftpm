@@ -10,27 +10,11 @@
  
  The project has been developed in SwiftUI. 
  
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
+
+
+https://user-images.githubusercontent.com/62070103/164985324-6cb62153-5538-485c-b84d-ce46cec6b7a4.mov
+
+
  
  
  
