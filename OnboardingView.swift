@@ -44,9 +44,10 @@ struct OnboardingView: View {
 					.fontWeight(.regular)
 					.multilineTextAlignment(.center)
 				
-				Text("If you need help tap the 💡.")
+				Text("If you need help tap the 💡 and remember that the emojis describe the title and not the plot of the movie or book!")
 					.font(.system(size: 25))
 					.fontWeight(.regular)
+					.multilineTextAlignment(.center)
 				}
 
 				
