@@ -1,5 +1,8 @@
  # Emoj-it 
- 
+ [![](https://img.shields.io/badge/iOS-15.8-orange)](#)
+[![](https://img.shields.io/badge/Platforms-iPad-blue)](#)
+[![](https://img.shields.io/badge/Category-Game-brightgreen)](#)
+
  A playground project to run on any `iPad` pro model
  
  ___
